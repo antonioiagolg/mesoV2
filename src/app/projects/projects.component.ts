@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from './project.model';
+import { ProjectService } from './project.service';
 
 @Component({
   selector: 'mes-projects',
@@ -7,14 +8,12 @@ import { Project } from './project.model';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: Project[] = [
-    { title: 'Sigconcursos'},
-    { title: 'Carteira SET'}
-  ]
+  projects: Project[];
   
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.projects = this.projectService.getProjects();
   }
 
 }

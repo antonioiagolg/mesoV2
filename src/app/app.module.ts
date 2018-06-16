@@ -19,6 +19,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
+import { ProjectService } from './projects/project.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
     MatGridListModule,
     MatTooltipModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

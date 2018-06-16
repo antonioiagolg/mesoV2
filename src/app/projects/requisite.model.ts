@@ -3,7 +3,7 @@ export interface Requisite {
     id: number;
     requisiteType: string;
     artr: number;
-    referencedFiles: string;
+    dataQtd: number;
     level: string;
     points: number;
 }
