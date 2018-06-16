@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "mes",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "themes/meso.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
