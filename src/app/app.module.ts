@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -20,6 +21,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 import { ProjectService } from './projects/project.service';
+import { ProjectFormDialogComponent } from './projects/project-form-dialog/project-form-dialog.component';
 
 
 @NgModule({
@@ -29,6 +31,10 @@ import { ProjectService } from './projects/project.service';
     ProjectsComponent,
     ProjectComponent,
     ProjectDetailsComponent,
+    ProjectFormDialogComponent,
+  ],
+  entryComponents: [
+    ProjectFormDialogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -42,9 +48,13 @@ import { ProjectService } from './projects/project.service';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
-  providers: [ProjectService],
+  providers: [
+    ProjectService,
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
