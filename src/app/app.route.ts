@@ -4,6 +4,6 @@ import { ProjectDetailsComponent } from "./projects/project-details/project-deta
 
 export const appRoutes: Routes = [
     { path: 'projects', component: ProjectsComponent },
-    { path: 'detail/:id', component: ProjectDetailsComponent},
+    { path: 'detail/:id', component: ProjectDetailsComponent },
     { path: '', redirectTo: '/projects', pathMatch: 'full' }
 ]
