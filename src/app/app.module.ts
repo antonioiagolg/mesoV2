@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { appRoutes } from './app.route';
 
@@ -11,9 +12,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -42,6 +44,7 @@ import { ProjectFormDialogComponent } from './projects/project-form-dialog/proje
     FlexLayoutModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    ReactiveFormsModule,
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
@@ -49,7 +52,8 @@ import { ProjectFormDialogComponent } from './projects/project-form-dialog/proje
     MatListModule,
     MatGridListModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [
     ProjectService,

@@ -3,7 +3,10 @@
        <mat-card-title>{{project.title}}</mat-card-title> 
     </mat-card-header>
     <mat-card-actions>
-        <button mat-icon-button [routerLink]="['/detail', project.id]" matTooltip="Abrir projeto">
+        <button mat-icon-button
+                [routerLink]="['/projects/detail', project.id]"
+                aria-label="Botão que abre os detalhes do projeto"
+                matTooltip="Abrir projeto">
             <mat-icon>open_in_new</mat-icon>
         </button>
     </mat-card-actions>

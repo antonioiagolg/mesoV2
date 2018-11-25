@@ -2,9 +2,10 @@
     <span>MesoV2</span>
     <span class="toolbar-spacer"></span>
     <button mat-icon-button
-            routerLink="/projects"
+            [routerLink]="['/projects']"
+            matTooltip="Listar projetos"
             matTooltipPosition="below"
-            matTooltip="Listar projetos">
+            aria-label="Botão que mostra os projetos">
         <mat-icon>work</mat-icon>
     </button>
 </mat-toolbar>

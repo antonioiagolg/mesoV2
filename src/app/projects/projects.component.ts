@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
+      this.projects = this.projectService.getProjects();
     });
   }
 
